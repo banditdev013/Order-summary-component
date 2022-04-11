@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+p{
+    font-size: 16px;
+    color: var(--Desaturated-blue);
+    line-height: 24px;
+}
+
+body{
+    background-color: var(--Pale-blue);
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.card{
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: var(--Very-pale-blue);
+    box-shadow: 4px 18px 12px hsl(224, 23%, 55%, 0.1);
+}
+
+img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body{
+    margin: 30px 3rem;
+}
+
+.card-text{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-text h2{
+    font-weight: 900;
+    color: var(--Dark-blue);
+    margin-bottom: 24px;
+}
+
+.card-item {
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    background-color: hsl(225, 100%, 94%, 0.3);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-item .music{
+    display: flex;
+    align-items: center;
+}
+
+.card-item h4 {
+    color: var(--Dark-blue);
+}
+
+.card-item img{
+    width: 40px;
+    margin-right: 18px;
+}
+
+.card-item button{
+    font-weight: 700;
+    color: var(--Bright-blue);
+    background: transparent;
+    text-decoration: underline;
+    border: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.card-item button:hover{
+    text-decoration: none;
+    opacity: 0.6;
+
+}
+
+.card-footer .btn1 {
+    width: 100%;
+    padding: 12px;
+    font-weight: 700;
+    color: var(--Very-pale-blue);
+    background-color: var(--Bright-blue);
+    box-shadow: 0 10px 36px hsl(245, 75%, 52%, 0.3);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all .3s ease;
+}
+
+.card-footer .btn1:hover{
+    opacity: 0.6;
+}
+
+.card-footer .btn2{
+    width: 100%;
+    padding: 12px;
+    font-weight: 700;
+    color: var(--Desaturated-blue);
+    background: transparent;
+    border: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.card-footer .btn2:hover{
+    color: var(--Dark-blue);
+}
+
+.attribution {
+    margin-top: 20px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px){
+    body{
+        background-position-y: -300px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body{
+        margin: 0 20px;
+    }
+    .card-body{
+        margin: 30px;
+    }
+    .card-item {
+        padding: 20px;
+    }
+    .card-footer .btn1, .card-footer .btn2{
+        padding: 16px;
+    }
+}
